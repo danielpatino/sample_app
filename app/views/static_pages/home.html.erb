@@ -1,19 +1,11 @@
-<div class="center jumbotron">
-  <h1>Ruby on Rails Tutorial Sample App</h1>
-
-  <h2>Publish your art and be followed. Follow other artists. Buy and rent art.</h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
-
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
-
-
 <% if signed_in? %>
   <div class="row">
     <aside class="col-sm-4">
       <section>
         <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
       </section>
       <section>
         <%= render 'shared/micropost_form' %>
@@ -37,7 +29,7 @@
     </h2>
 
     <%= link_to "Sign up now!", signup_path,
-                                class: "btn btn-large btn-primary" %>
+                                class: "btn btn-lg btn-primary" %>
   </div>
 
   <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
